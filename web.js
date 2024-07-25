@@ -121,7 +121,7 @@ app.post('/upload', upload.single('image'), (req, res) => {
             return res.status(500).json({ error: '데이터베이스 오류' });
         }
 
-        const emailText = `이벤트명: ${eventName}\n연락처: ${phoneNumber}\n금메달: ${goldNumber}개\n은메달: ${sliverNumber}개\n동메달: ${bronzeNumber}개\n회원ID: ${memberIdValue}`;
+        const emailText = `고객성함: ${eventName}\n연락처: ${phoneNumber}\n금메달: ${goldNumber}개\n은메달: ${sliverNumber}개\n동메달: ${bronzeNumber}개\n회원ID: ${memberIdValue}`;
 
         if (req.file) {
             const imageBuffer = req.file.buffer;
